@@ -322,7 +322,7 @@ HTML tables are used to display tabular data. Here are some key table elements:
 8. `<tbody>`: Represents the table body group.
 9. `<tfoot>`: Represents the table footer group.
 
-## 1-14 Navigation Simple Navbar and Internal Navigation:
+## 1-14 Navigation Simple Navbar and Internal Navigation
 
 A simple navigation bar (navbar) is a common UI component in web development. It usually contains links to different sections or pages of a website. Internal navigation refers to linking to different sections within the same web page. Here's an example of a simple navbar and internal navigation:
 
