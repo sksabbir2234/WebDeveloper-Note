@@ -244,6 +244,7 @@ There are many functions in PHP that can be used to work with arrays. Some of th
 - `array_sort()`: This function sorts the elements in an array.
 - `array_reverse()`: This function reverses the order of the elements in an array.
 
+```php
 <?php
 
 // Create an indexed array of numbers
@@ -293,6 +294,7 @@ echo "The number 3 is at index $index in the $numbers array.\n";
 echo "The country France is at index $country in the $countries array.\n";
 
 ?>
+```
 
 # Explore Control Structure
 
