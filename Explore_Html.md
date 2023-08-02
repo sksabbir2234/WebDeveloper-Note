@@ -442,3 +442,76 @@ Emmet is a productivity tool that allows developers to write HTML and CSS code u
 
 Emmet supports more complex expressions and nesting, which can significantly speed up writing HTML and CSS code. It's worth exploring and using for web development tasks.
 
+## 1-17 Pseudo-classes `hover`, `visited`, `focus`
+
+Pseudo-classes are used to style elements based on their state or position in the document. Here are some commonly used pseudo-classes:
+
+1. `:hover`: This pseudo-class is applied when the user hovers over an element with the mouse pointer. It is commonly used to change the appearance of links or buttons when they are hovered.
+
+```css
+a:hover {
+  color: red;
+}
+```
+
+2. `:visited`: This pseudo-class targets links that have been visited by the user. It allows you to style visited links differently from unvisited links.
+
+```css
+a:visited {
+  color: purple;
+}
+```
+
+3. `:focus`: This pseudo-class targets an element that currently has keyboard focus or has been focused by the user. It is often used to style form elements or interactive elements.
+
+```css
+input:focus {
+  border: 2px solid blue;
+}
+```
+
+## 1-18 Position `static`, `relative`, `absolute`, `fixed`, `sticky`
+
+These are different values of the `position` property in CSS that control the positioning of elements. Here's a brief explanation of each:
+
+1. `position: static`: This is the default value. Elements with `position: static` are positioned according to the normal flow of the document. Top, right, bottom, left, and z-index properties have no effect on statically positioned elements.
+
+2. `position: relative`: With `position: relative`, an element is positioned relative to its normal position in the document flow. You can use `top`, `right`, `bottom`, and `left` properties to move the element from its original position.
+
+3. `position: absolute`: Elements with `position: absolute` are positioned relative to the nearest positioned ancestor (an ancestor element with `position` other than `static`). If there is no positioned ancestor, it is positioned relative to the document body. It is taken out of the normal flow of the document.
+
+4. `position: fixed`: Elements with `position: fixed` are positioned relative to the viewport (the browser window). They will remain fixed at a specified position even when the user scrolls the page.
+
+5. `position: sticky`: Elements with `position: sticky` behave like `position: relative` within its container until the user scrolls to a certain point. Once the element reaches that point, it becomes `position: fixed` and remains fixed until the scrolling passes that point.
+
+## 1-19 Stack Elements `z-index` and Pseudo-Elements
+
+1. `z-index`: The `z-index` property is used to control the stacking order of elements along the z-axis (depth) in a web page. Elements with higher `z-index` values appear in front of elements with lower `z-index` values. The default `z-index` is `auto`, and elements are stacked in the order they appear in the document. Positive integer values increase the stacking order, and negative values decrease it.
+
+```css
+/* Higher z-index means element appears in front of others */
+.element1 {
+  z-index: 2;
+}
+
+.element2 {
+  z-index: 1;
+}
+```
+
+2. Pseudo-elements: Pseudo-elements are used to style a specific part of an element. They are denoted by double colons (::) in CSS. Common pseudo-elements include `::before` and `::after`, which allow you to insert content before or after an element's content.
+
+```css
+.element::before {
+  content: "Before";
+  /* Other styles */
+}
+
+.element::after {
+  content: "After";
+  /* Other styles */
+}
+```
+
+Please note that `::before` and `::after` can be used only with elements that have `content` in their CSS (e.g., `content: ""`), like elements with `display: block`, `inline-block`, `table`, etc.
+
