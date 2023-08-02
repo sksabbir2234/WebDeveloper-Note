@@ -802,3 +802,180 @@ Object Summary:
 
 
 
+### 3-30 What are functions:
+
+In JavaScript, functions are blocks of code that perform a specific task or a set of tasks. They are reusable pieces of code that can be called multiple times from different parts of the program. Functions can take input parameters, perform some actions, and optionally return a value. They help in organizing code, improving reusability, and making the code easier to maintain.
+
+Example of a simple function in JavaScript:
+
+```javascript
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+console.log(greet("John")); // Output: Hello, John!
+console.log(greet("Alice")); // Output: Hello, Alice!
+```
+
+### 3-31 JS Concepts recap, var, let, and const:
+
+In JavaScript, `var`, `let`, and `const` are used to declare variables.
+
+1. `var`: Prior to ES6, `var` was the only way to declare variables in JavaScript. It has function scope, which means it is only accessible within the function where it is declared, or it becomes a global variable if declared outside any function. Avoid using `var` in modern JavaScript.
+
+2. `let`: Introduced in ES6, `let` has block scope, meaning it is accessible only within the block (enclosed by curly braces `{}`) where it is defined.
+
+3. `const`: Also introduced in ES6, `const` is used to declare constants, which cannot be re-assigned after initialization. It also has block scope.
+
+Example:
+
+```javascript
+function exampleScope() {
+  var x = 1;
+  let y = 2;
+  const z = 3;
+
+  if (true) {
+    var x = 10; // This will override the previous 'x'
+    let y = 20; // This creates a new 'y' within the block
+    const z = 30; // This creates a new 'z' within the block
+
+    console.log(x, y, z); // Output: 10 20 30
+  }
+
+  console.log(x, y, z); // Output: 10 2 3
+}
+
+exampleScope();
+```
+
+### 3-32 Unit Convert Inch to Feet, miles to kilometer:
+
+Here are two simple functions to convert inches to feet and miles to kilometers:
+
+```javascript
+function inchesToFeet(inches) {
+  return inches / 12;
+}
+
+function milesToKilometers(miles) {
+  return miles * 1.60934;
+}
+
+console.log(inchesToFeet(36)); // Output: 3
+console.log(milesToKilometers(10)); // Output: 16.0934
+```
+
+### 3-33 Check even and odd numbers using function:
+
+You can create a function to check whether a number is even or odd:
+
+```javascript
+function isEven(number) {
+  return number % 2 === 0;
+}
+
+function isOdd(number) {
+  return !isEven(number);
+}
+
+console.log(isEven(4)); // Output: true
+console.log(isOdd(7)); // Output: true
+```
+
+### 3-34 Check whether a year is a Leap Year or not (simplified way):
+
+A leap year is a year that is evenly divisible by 4, except for years that are evenly divisible by 100. However, years that are evenly divisible by 400 are leap years. Here's a simplified function to check if a year is a leap year:
+
+```javascript
+function isLeapYear(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+
+console.log(isLeapYear(2020)); // Output: true
+console.log(isLeapYear(2000)); // Output: true
+console.log(isLeapYear(1900)); // Output: false
+```
+
+### 3-35 Calculate Sum of all numbers of an array:
+
+To calculate the sum of all numbers in an array, you can use a loop to iterate through the array and accumulate the sum:
+
+```javascript
+function arraySum(arr) {
+  let sum = 0;
+  for (let num of arr) {
+    sum += num;
+  }
+  return sum;
+}
+
+console.log(arraySum([1, 2, 3, 4, 5])); // Output: 15
+console.log(arraySum([10, 20, 30])); // Output: 60
+```
+
+### 3-36 Get Odd Numbers of an array and get odd Sum of an array:
+
+You can create two functions - one to filter out odd numbers from an array and another to calculate their sum:
+
+```javascript
+function getOddNumbers(arr) {
+  return arr.filter(num => num % 2 !== 0);
+}
+
+function getOddSum(arr) {
+  return arraySum(getOddNumbers(arr));
+}
+
+console.log(getOddNumbers([1, 2, 3, 4, 5])); // Output: [1, 3, 5]
+console.log(getOddSum([1, 2, 3, 4, 5])); // Output: 9
+```
+
+Note that we reused the `arraySum` function from example 20-5.
+
+### 3-37 Calculate Factorial of a number using for loop:
+
+You can use a `for` loop to calculate the factorial of a number:
+
+```javascript
+function factorial(num) {
+  let result = 1;
+  for (let i = 1; i <= num; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+console.log(factorial(5)); // Output: 120
+console.log(factorial(0)); // Output: 1
+```
+
+### 3-38 Factorial using a while loop or a decrementing loop:
+
+You can achieve the same result using a `while` loop or a decrementing loop:
+
+```javascript
+// Using a while loop
+function factorialWhile(num) {
+  let result = 1;
+  let i = 1;
+  while (i <= num) {
+    result *= i;
+    i++;
+  }
+  return result;
+}
+
+// Using a decrementing loop
+function factorialDecrement(num) {
+  let result = 1;
+  for (let i = num; i > 0; i--) {
+    result *= i;
+  }
+  return result;
+}
+
+console.log(factorialWhile(5)); // Output: 120
+console.log(factorialDecrement(5)); // Output: 120
+```
+
