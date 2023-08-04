@@ -23,7 +23,7 @@ In programming, a variable is a container used to store data or values. Here are
    var myVariable;
    ```
 
-2. Variable Name: Choose a unique name for the variable, following the naming conventions (discussed later). The name should be meaningful and describe the data it holds.
+2. Variable Name: Choose a unique name for the variable, following the naming conventions.The name should be meaningful and describe the data it holds.
 
 3. Assignment Operator: Use the assignment operator `=` to assign a value to the variable. For example:
 
@@ -61,7 +61,7 @@ In JavaScript, variables can hold different types of data:
    var isStudent = true;
    ```
 
-## 3-4 JavaScript Keyword, Variable Name Naming Convention
+## 3-4 JavaScript Keyword, Variable Name, Naming Convention
 
 JavaScript has reserved keywords that have specific meanings and cannot be used as variable names. Some examples include `var`, `let`, `const`, `if`, `else`, `function`, etc.
 
@@ -310,13 +310,12 @@ if (num > 0) {
 
 In this example, we first check if `num` is positive or negative. If it's positive, we further check if it's a single-digit or a two-digit or greater positive number.
 
-
-
 ## 3-16 Fundamentals of Arrays
 
 An array is a data structure that allows you to store multiple values of the same type in a single variable. Arrays are zero-indexed, which means the first element is accessed using index 0, the second with index 1, and so on.
 
 Example of declaring an array in JavaScript:
+
 ```javascript
 let numbers = [1, 2, 3, 4, 5];
 ```
@@ -326,6 +325,7 @@ let numbers = [1, 2, 3, 4, 5];
 The `while` loop is used to repeatedly execute a block of code as long as a specified condition is true. The loop continues until the condition becomes false.
 
 Example of a while loop in JavaScript:
+
 ```javascript
 let i = 0;
 while (i < 5) {
@@ -366,6 +366,7 @@ while (evenNum <= 10) {
 The `for` loop is another way to repeat a block of code for a specified number of times. It's commonly used when you know the number of iterations beforehand.
 
 Example of a for loop in JavaScript:
+
 ```javascript
 for (let i = 0; i < 5; i++) {
   console.log("Iteration: " + i);
@@ -377,6 +378,7 @@ for (let i = 0; i < 5; i++) {
 You can use both while and for loops to iterate over the elements of an array.
 
 Using a for loop to print all elements of an array:
+
 ```javascript
 let fruits = ["apple", "banana", "orange"];
 for (let i = 0; i < fruits.length; i++) {
@@ -389,6 +391,7 @@ for (let i = 0; i < fruits.length; i++) {
 You can use the `break` statement to exit a loop prematurely, and the `continue` statement to skip the current iteration and move to the next one.
 
 Example using a for loop with break and continue:
+
 ```javascript
 for (let i = 0; i < 5; i++) {
   if (i === 2) {
@@ -406,6 +409,7 @@ for (let i = 0; i < 5; i++) {
 You can use loops to iterate over elements in reverse order.
 
 Example of using a for loop in reverse:
+
 ```javascript
 for (let i = 5; i >= 0; i--) {
   console.log("Iteration: " + i);
@@ -485,8 +489,6 @@ console.log("Min: " + findMin(numbersArray)); // Output: 1
 console.log(isEvenOrOdd(7)); // Output: Odd
 console.log(isEvenOrOdd(4)); // Output: Even
 ```
-
-
 
 ## 3-24 Declare a Function, Call Function, Function vs. Loop
 
@@ -800,9 +802,7 @@ Object Summary:
 - You can use `for...in` loop or `Object.entries()` method to loop through an object and access its properties and values.
 - Objects are useful for representing complex data structures and are a fundamental part of JavaScript programming.
 
-
-
-### 3-30 What are functions:
+### 3-30 What are functions
 
 In JavaScript, functions are blocks of code that perform a specific task or a set of tasks. They are reusable pieces of code that can be called multiple times from different parts of the program. Functions can take input parameters, perform some actions, and optionally return a value. They help in organizing code, improving reusability, and making the code easier to maintain.
 
@@ -817,7 +817,7 @@ console.log(greet("John")); // Output: Hello, John!
 console.log(greet("Alice")); // Output: Hello, Alice!
 ```
 
-### 3-31 JS Concepts recap, var, let, and const:
+### 3-31 JS Concepts recap, var, let, and const
 
 In JavaScript, `var`, `let`, and `const` are used to declare variables.
 
@@ -849,7 +849,7 @@ function exampleScope() {
 exampleScope();
 ```
 
-### 3-32 Unit Convert Inch to Feet, miles to kilometer:
+### 3-32 Unit Convert Inch to Feet, miles to kilometer
 
 Here are two simple functions to convert inches to feet and miles to kilometers:
 
@@ -866,7 +866,7 @@ console.log(inchesToFeet(36)); // Output: 3
 console.log(milesToKilometers(10)); // Output: 16.0934
 ```
 
-### 3-33 Check even and odd numbers using function:
+### 3-33 Check even and odd numbers using function
 
 You can create a function to check whether a number is even or odd:
 
@@ -883,7 +883,7 @@ console.log(isEven(4)); // Output: true
 console.log(isOdd(7)); // Output: true
 ```
 
-### 3-34 Check whether a year is a Leap Year or not (simplified way):
+### 3-34 Check whether a year is a Leap Year or not (simplified way)
 
 A leap year is a year that is evenly divisible by 4, except for years that are evenly divisible by 100. However, years that are evenly divisible by 400 are leap years. Here's a simplified function to check if a year is a leap year:
 
@@ -897,7 +897,7 @@ console.log(isLeapYear(2000)); // Output: true
 console.log(isLeapYear(1900)); // Output: false
 ```
 
-### 3-35 Calculate Sum of all numbers of an array:
+### 3-35 Calculate Sum of all numbers of an array
 
 To calculate the sum of all numbers in an array, you can use a loop to iterate through the array and accumulate the sum:
 
@@ -914,7 +914,7 @@ console.log(arraySum([1, 2, 3, 4, 5])); // Output: 15
 console.log(arraySum([10, 20, 30])); // Output: 60
 ```
 
-### 3-36 Get Odd Numbers of an array and get odd Sum of an array:
+### 3-36 Get Odd Numbers of an array and get odd Sum of an array
 
 You can create two functions - one to filter out odd numbers from an array and another to calculate their sum:
 
@@ -933,7 +933,7 @@ console.log(getOddSum([1, 2, 3, 4, 5])); // Output: 9
 
 Note that we reused the `arraySum` function from example 20-5.
 
-### 3-37 Calculate Factorial of a number using for loop:
+### 3-37 Calculate Factorial of a number using for loop
 
 You can use a `for` loop to calculate the factorial of a number:
 
@@ -950,7 +950,7 @@ console.log(factorial(5)); // Output: 120
 console.log(factorial(0)); // Output: 1
 ```
 
-### 3-38 Factorial using a while loop or a decrementing loop:
+### 3-38 Factorial using a while loop or a decrementing loop
 
 You can achieve the same result using a `while` loop or a decrementing loop:
 
@@ -977,5 +977,241 @@ function factorialDecrement(num) {
 
 console.log(factorialWhile(5)); // Output: 120
 console.log(factorialDecrement(5)); // Output: 120
+```
+
+
+
+### 3-39 String comparison using toLowerCase toUpperCase
+
+In JavaScript, you can use the `toLowerCase()` and `toUpperCase()` methods to convert strings to lowercase and uppercase, respectively. These methods are useful for string comparison when you want to ignore case sensitivity.
+
+Example:
+```javascript
+const str1 = 'Hello';
+const str2 = 'hello';
+
+console.log(str1.toLowerCase() === str2.toLowerCase()); // true
+console.log(str1.toUpperCase() === str2.toUpperCase()); // true
+```
+
+```javascript
+const originalString = "   Hello World   ";
+
+// charAt
+const charAtIndex = originalString.charAt(1); // "e"
+console.log(charAtIndex);
+
+// charCodeAt
+const charCodeAtIndex = originalString.charCodeAt(1); // 101
+console.log(charCodeAtIndex);
+
+// concat
+const concatenatedString = originalString.concat("!!!"); // "   Hello World   !!!"
+console.log(concatenatedString);
+
+// indexOf
+const indexOfO = originalString.indexOf("o"); // 7
+console.log(indexOfO);
+
+// lastIndexOf
+const lastIndexOfO = originalString.lastIndexOf("o"); // 10
+console.log(lastIndexOfO);
+
+// slice
+const slicedString = originalString.slice(4, 9); // "o Wor"
+console.log(slicedString);
+
+// substring
+const substringString = originalString.substring(4, 9); // "o Wor"
+console.log(substringString);
+
+// substr
+const substrString = originalString.substr(4, 5); // "o Wor"
+console.log(substrString);
+
+// toUpperCase
+const upperCaseString = originalString.toUpperCase(); // "   HELLO WORLD   "
+console.log(upperCaseString);
+
+// toLowerCase
+const lowerCaseString = originalString.toLowerCase(); // "   hello world   "
+console.log(lowerCaseString);
+
+// trim
+const trimmedString = originalString.trim(); // "Hello World"
+console.log(trimmedString);
+
+// replace
+const replacedString = originalString.replace("Hello", "Hi"); // "   Hi World   "
+console.log(replacedString);
+
+// split
+const splitArray = originalString.split(" "); // ["", "", "", "Hello", "World", "", "", ""]
+console.log(splitArray);
+
+// startsWith
+const startsWithHello = originalString.startsWith("Hello"); // false
+console.log(startsWithHello);
+
+// endsWith
+const endsWithWorld = originalString.endsWith("World"); // false
+console.log(endsWithWorld);
+
+// includes
+const includesWorld = originalString.includes("World"); // true
+console.log(includesWorld);
+
+```
+
+### 3-40 Apply Search includes, indexOf, startsWith, endsWith
+
+These methods are used to search for substrings within a string.
+
+- `search`: Returns the index of the first occurrence of a pattern in a string. It supports regular expressions.
+- `includes`: Checks if a substring is present in the given string and returns a boolean value.
+- `indexOf`: Returns the index of the first occurrence of a substring. Returns -1 if not found.
+- `startsWith`: Checks if a string starts with a specified substring and returns a boolean value.
+- `endsWith`: Checks if a string ends with a specified substring and returns a boolean value.
+
+Example:
+
+```javascript
+const sentence = 'This is a sample sentence';
+
+console.log(sentence.search('sample')); // 10
+console.log(sentence.includes('is')); // true
+console.log(sentence.indexOf('is')); // 2
+console.log(sentence.startsWith('This')); // true
+console.log(sentence.endsWith('sentence')); // true
+```
+
+### 3-41 How to split, slice, substr, substring, concat, join
+
+These are common string manipulation methods.
+
+- `split`: Splits a string into an array of substrings based on a specified delimiter.
+- `slice`: Extracts a portion of a string and returns it as a new string.
+- `substr`: Similar to `slice`, but takes a starting index and a length to extract.
+- `substring`: Similar to `slice`, but takes start and end indices to extract.
+- `concat`: Joins two or more strings together.
+- `join`: Joins elements of an array into a string using a specified separator.
+
+Example:
+
+```javascript
+const sentence = 'This is a sample sentence';
+
+console.log(sentence.split(' ')); // ['This', 'is', 'a', 'sample', 'sentence']
+console.log(sentence.slice(5, 7)); // 'is'
+console.log(sentence.substr(10, 6)); // 'sample'
+console.log(sentence.substring(0, 4)); // 'This'
+console.log('Hello'.concat(' ', 'World')); // 'Hello World'
+console.log(['Hello', 'World'].join(' ')); // 'Hello World'
+```
+
+### 3-42 Math, abs, pow, round, ceil, floor, and random number
+
+These are useful mathematical operations available in the `Math` object.
+
+- `abs`: Returns the absolute value of a number.
+- `pow`: Returns the base to the power of the exponent.
+- `round`: Rounds a number to the nearest integer.
+- `ceil`: Rounds a number up to the nearest integer.
+- `floor`: Rounds a number down to the nearest integer.
+- `random`: Generates a random number between 0 (inclusive) and 1 (exclusive).
+
+Example:
+
+```javascript
+console.log(Math.abs(-5)); // 5
+console.log(Math.pow(2, 3)); // 8
+console.log(Math.round(3.6)); // 4
+console.log(Math.ceil(3.2)); // 4
+console.log(Math.floor(3.8)); // 3
+console.log(Math.random()); // Random number between 0 (inclusive) and 1 (exclusive)
+```
+
+### 3-43 Swap variable, swap without temp, destructuring
+
+In JavaScript, you can swap the values of two variables using a temporary variable or using destructuring assignment.
+
+Example (with a temporary variable):
+
+```javascript
+let a = 5;
+let b = 10;
+
+// Swap using a temporary variable
+let temp = a;
+a = b;
+b = temp;
+
+console.log(a, b); // Output: 10 5
+```
+
+Example (without a temporary variable using destructuring):
+
+```javascript
+let a = 5;
+let b = 10;
+
+[a, b] = [b, a];
+
+console.log(a, b); // Output: 10 5
+```
+
+
+### 3-44 Who is the tallest? Find the max number in an array
+
+To find the maximum number in an array, you can use the `Math.max()` function or the spread operator.
+
+Example using `Math.max()`:
+
+```javascript
+const heights = [170, 185, 160, 175, 190];
+const tallest = Math.max(...heights);
+
+console.log(tallest); // Output: 190
+```
+
+### 3-45 Reverse a string and Reverse words in a sentence
+
+You can reverse a string by splitting it into an array of characters, then using the `reverse()` method and finally joining the characters back into a string. To reverse the words in a sentence, you can split the sentence into an array of words, reverse the array, and join the words back into a sentence.
+
+Example for reversing a string:
+
+```javascript
+const str = 'Hello, world!';
+const reversedStr = str.split('').reverse().join('');
+
+console.log(reversedStr); // Output: '!dlrow ,olleH'
+```
+
+Example for reversing words in a sentence:
+
+```javascript
+const sentence = 'This is a sample sentence';
+const reversedSentence = sentence.split(' ').reverse().join(' ');
+
+console.log(reversedSentence); // Output: 'sentence sample a is This'
+```
+
+### 3-46 (advanced) Create a Fibonacci Series using a for loop
+
+The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones. You can create it using a for loop.
+
+Example:
+
+```javascript
+function fibonacciSeries(n) {
+  const series = [0, 1];
+  for (let i = 2; i < n; i++) {
+    series.push(series[i - 1] + series[i - 2]);
+  }
+  return series;
+}
+
+const fibSeries = fibonacciSeries(10);
+console.log(fibSeries); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 ```
 
