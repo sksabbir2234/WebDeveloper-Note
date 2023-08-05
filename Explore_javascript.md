@@ -1215,3 +1215,206 @@ const fibSeries = fibonacciSeries(10);
 console.log(fibSeries); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 ```
 
+### 3-47 isArray, includes, concat
+
+#### isArray:
+`isArray` is a method that checks if a given value is an array.
+
+```javascript
+function isArray(arr) {
+  return Array.isArray(arr);
+}
+
+// Example usage:
+console.log(isArray([1, 2, 3])); // true
+console.log(isArray("hello")); // false
+```
+
+#### includes:
+`includes` is a method that checks if a given array contains a specific element.
+
+```javascript
+function includesElement(arr, element) {
+  return arr.includes(element);
+}
+
+// Example usage:
+console.log(includesElement([1, 2, 3], 2)); // true
+console.log(includesElement(["apple", "banana", "orange"], "pear")); // false
+```
+
+#### concat:
+`concat` is a method that joins two or more arrays and returns a new array.
+
+```javascript
+function concatenateArrays(arr1, arr2) {
+  return arr1.concat(arr2);
+}
+
+// Example usage:
+console.log(concatenateArrays([1, 2, 3], [4, 5, 6])); // [1, 2, 3, 4, 5, 6]
+```
+
+### 3-48 Get part of an array and insert elements using slice, splice
+
+#### slice:
+`slice` is a method that returns a shallow copy of a portion of an array.
+
+```javascript
+function getSliceOfArray(arr, start, end) {
+  return arr.slice(start, end);
+}
+
+// Example usage:
+console.log(getSliceOfArray([1, 2, 3, 4, 5], 1, 4)); // [2, 3, 4]
+```
+
+#### splice:
+`splice` is a method that changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+```javascript
+function insertElementsIntoArray(arr, index, ...elements) {
+  arr.splice(index, 0, ...elements);
+  return arr;
+}
+
+// Example usage:
+console.log(insertElementsIntoArray([1, 2, 3, 4], 2, 10, 11)); // [1, 2, 10, 11, 3, 4]
+```
+
+### 3-49 Remove duplicate items from an array
+
+To remove duplicate items from an array, you can use the `Set` object to create a unique set of elements, and then convert it back to an array.
+
+```javascript
+function removeDuplicatesFromArray(arr) {
+  return Array.from(new Set(arr));
+}
+
+// Example usage:
+console.log(removeDuplicatesFromArray([1, 2, 2, 3, 4, 4, 5])); // [1, 2, 3, 4, 5]
+```
+
+### 3-50 Write foo, bar, foobar if divisible by 3 or 5 or both
+
+You can use a loop to iterate through the numbers and check their divisibility by 3 and 5.
+
+```javascript
+function printFooBar(numbers) {
+  for (let num of numbers) {
+    let output = "";
+    if (num % 3 === 0) {
+      output += "foo";
+    }
+    if (num % 5 === 0) {
+      output += "bar";
+    }
+    console.log(output || num);
+  }
+}
+
+// Example usage:
+printFooBar([1, 2, 3, 4, 5, 6, 10, 15]);
+/* Output:
+1
+2
+foo
+4
+bar
+foo
+bar
+foobar
+*/
+```
+
+### 3-51 Use add and multiplication to calculate wood requirements
+
+Let's assume you have two wood requirements: one for making tables and another for making chairs. You can use addition and multiplication to calculate the total wood requirements.
+
+```javascript
+function calculateWoodRequirements(numTables, numChairs, woodPerTable, woodPerChair) {
+  const totalWoodForTables = numTables * woodPerTable;
+  const totalWoodForChairs = numChairs * woodPerChair;
+  const totalWoodRequired = totalWoodForTables + totalWoodForChairs;
+  return totalWoodRequired;
+}
+
+// Example usage:
+console.log(calculateWoodRequirements(5, 10, 10, 5)); // 125 (5 tables * 10 wood + 10 chairs * 5 wood = 50 + 50 = 100)
+```
+### 3-52 Find the cheapest phone from an array of phone objects
+
+Assuming you have an array of phone objects with a `name` and `price` property, you can find the cheapest phone by iterating through the array and comparing the prices.
+
+```javascript
+function findCheapestPhone(phones) {
+  let cheapestPhone = phones[0];
+  for (let i = 1; i < phones.length; i++) {
+    if (phones[i].price < cheapestPhone.price) {
+      cheapestPhone = phones[i];
+    }
+  }
+  return cheapestPhone;
+}
+
+// Example usage:
+const phones = [
+  { name: "Phone A", price: 500 },
+  { name: "Phone B", price: 300 },
+  { name: "Phone C", price: 700 },
+];
+console.log(findCheapestPhone(phones)); // { name: "Phone B", price: 300 }
+```
+
+### 3-52 Calculate the total cost of the products in a shopping cart
+
+Assuming you have an array of product objects with `name` and `price` properties, you can calculate the total cost of the products in the shopping cart by summing up the prices.
+
+```javascript
+function calculateTotalCost(cart) {
+  let totalCost = 0;
+  for (let product of cart) {
+    totalCost += product.price;
+  }
+  return totalCost;
+}
+
+// Example usage:
+const shoppingCart = [
+  { name: "Product A", price: 10 },
+  { name: "Product B", price: 20 },
+  { name: "Product C", price: 30 },
+];
+console.log(calculateTotalCost(shoppingCart)); // 60 (10 + 20 + 30)
+```
+
+### 3-53 (advanced) Multi-layer discount price calculation
+
+In this task, you can calculate the final price of a product after applying multiple layers of discounts.
+
+```javascript
+function calculateDiscountedPrice(basePrice, discounts) {
+  let finalPrice = basePrice;
+  for (let discount of discounts) {
+    if (discount.type === "percentage") {
+      finalPrice -= (discount.value / 100) * finalPrice;
+    } else if (discount.type === "fixed") {
+      finalPrice -= discount.value;
+    }
+  }
+  return finalPrice;
+}
+
+// Example usage:
+const basePrice = 100;
+const discounts = [
+  { type: "percentage", value: 10 }, // 10% discount
+  { type: "fixed", value: 20 }, // $20 discount
+];
+console.log(calculateDiscountedPrice(basePrice, discounts)); // 70 (100 - 10% - $20)
+```
+
+### 3-54 Handle unexpected function input parameter error
+
+To handle unexpected function input parameter errors, you can use conditional statements
+
