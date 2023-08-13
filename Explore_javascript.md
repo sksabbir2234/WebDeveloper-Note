@@ -1503,3 +1503,78 @@ newDiv.innerText = 'This is a new div!';
 const container = document.querySelector('.container');
 container.appendChild(newDiv);
 ```
+
+### 3-63 Summary code 
+
+Let's create a simple web page that allows users to add and remove items from a shopping list. We'll use all the concepts you've learned to make this happen.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping List</title>
+<style>
+  .container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .item {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    display: inline-block;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Shopping List</h1>
+  <input type="text" id="itemInput" placeholder="Enter an item">
+  <button onclick="addItem()">Add Item</button>
+  <div id="itemList"></div>
+</div>
+
+<script>
+  function addItem() {
+    const input = document.getElementById('itemInput');
+    const itemName = input.value.trim();
+    
+    if (itemName !== '') {
+      const newItem = document.createElement('div');
+      newItem.classList.add('item');
+      newItem.innerText = itemName;
+      
+      const itemList = document.getElementById('itemList');
+      itemList.appendChild(newItem);
+      
+      input.value = '';
+    }
+  }
+  
+  function removeItem(element) {
+    element.parentNode.removeChild(element);
+  }
+  
+  const items = document.querySelectorAll('.item');
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      removeItem(item);
+    });
+  });
+</script>
+</body>
+</html>
+```
+
+This example brings together your learning points:
+- `getElementById` to get the input field.
+- `createElement` and `appendChild` to dynamically add items to the shopping list.
+- `querySelectorAll` and `forEach` loop to add click event listeners to each item.
+- `parentNode` to remove items from the list.
+- Styling changes using `style` property and CSS classes.
+- Real-world scenario: This could be a part of a shopping website where users can dynamically manage their shopping lists.
+
