@@ -979,13 +979,12 @@ console.log(factorialWhile(5)); // Output: 120
 console.log(factorialDecrement(5)); // Output: 120
 ```
 
-
-
 ### 3-39 String comparison using toLowerCase toUpperCase
 
 In JavaScript, you can use the `toLowerCase()` and `toUpperCase()` methods to convert strings to lowercase and uppercase, respectively. These methods are useful for string comparison when you want to ignore case sensitivity.
 
 Example:
+
 ```javascript
 const str1 = 'Hello';
 const str2 = 'hello';
@@ -1160,7 +1159,6 @@ let b = 10;
 console.log(a, b); // Output: 10 5
 ```
 
-
 ### 3-44 Who is the tallest? Find the max number in an array
 
 To find the maximum number in an array, you can use the `Math.max()` function or the spread operator.
@@ -1217,7 +1215,8 @@ console.log(fibSeries); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
 ### 3-47 isArray, includes, concat
 
-#### isArray:
+#### isArray
+
 `isArray` is a method that checks if a given value is an array.
 
 ```javascript
@@ -1230,7 +1229,8 @@ console.log(isArray([1, 2, 3])); // true
 console.log(isArray("hello")); // false
 ```
 
-#### includes:
+#### includes
+
 `includes` is a method that checks if a given array contains a specific element.
 
 ```javascript
@@ -1243,7 +1243,8 @@ console.log(includesElement([1, 2, 3], 2)); // true
 console.log(includesElement(["apple", "banana", "orange"], "pear")); // false
 ```
 
-#### concat:
+#### concat
+
 `concat` is a method that joins two or more arrays and returns a new array.
 
 ```javascript
@@ -1257,7 +1258,8 @@ console.log(concatenateArrays([1, 2, 3], [4, 5, 6])); // [1, 2, 3, 4, 5, 6]
 
 ### 3-48 Get part of an array and insert elements using slice, splice
 
-#### slice:
+#### slice
+
 `slice` is a method that returns a shallow copy of a portion of an array.
 
 ```javascript
@@ -1269,7 +1271,8 @@ function getSliceOfArray(arr, start, end) {
 console.log(getSliceOfArray([1, 2, 3, 4, 5], 1, 4)); // [2, 3, 4]
 ```
 
-#### splice:
+#### splice
+
 `splice` is a method that changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
 
 ```javascript
@@ -1342,6 +1345,7 @@ function calculateWoodRequirements(numTables, numChairs, woodPerTable, woodPerCh
 // Example usage:
 console.log(calculateWoodRequirements(5, 10, 10, 5)); // 125 (5 tables * 10 wood + 10 chairs * 5 wood = 50 + 50 = 100)
 ```
+
 ### 3-52 Find the cheapest phone from an array of phone objects
 
 Assuming you have an array of phone objects with a `name` and `price` property, you can find the cheapest phone by iterating through the array and comparing the prices.
@@ -1418,3 +1422,84 @@ console.log(calculateDiscountedPrice(basePrice, discounts)); // 70 (100 - 10% - 
 
 To handle unexpected function input parameter errors, you can use conditional statements
 
+Hey bro! It's great to see your interest in programming and web development. Let's dive into the world of the Document Object Model (DOM) in JavaScript and how it connects with HTML.
+
+### 3-55 What is DOM and How JS Connects with HTML
+
+The Document Object Model (DOM) is a programming interface that represents structured documents like HTML and XML as objects. It allows you to manipulate the structure, style, and content of a web page using JavaScript.
+
+When a web page is loaded, the browser constructs a DOM tree representing the page's structure. Each element in the HTML becomes a node in this tree. JavaScript can then interact with this tree to dynamically update the page without requiring a full page refresh.
+
+### 3-56 Traversing DOM - `getElementsByTagName`
+
+`getElementsByTagName` is a method that allows you to retrieve a collection of elements with a specific tag name. For instance, if you want to get all the `<p>` elements on a page, you can use:
+
+```javascript
+const paragraphs = document.getElementsByTagName('p');
+```
+
+### 3-57 Traversing DOM - `getElementByClass` vs `getElementById`
+
+- `getElementById` allows you to directly select an element by its unique ID.
+- `getElementByClass` is not a built-in function. Instead, you can use `getElementsByClassName` which returns a collection of elements with a specific class name.
+
+```javascript
+const elementById = document.getElementById('uniqueID');
+const elementsByClass = document.getElementsByClassName('className');
+```
+
+### 3-58 Traversing DOM - `querySelector` and `querySelectorAll`
+
+`querySelector` and `querySelectorAll` are powerful methods that allow you to select elements using CSS selectors.
+
+- `querySelector` returns the first element matching the selector.
+- `querySelectorAll` returns a NodeList containing all matching elements.
+
+```javascript
+const firstParagraph = document.querySelector('p');
+const allDivs = document.querySelectorAll('div');
+```
+
+### 3-59 Dynamic Style and Attributes Manipulation
+
+You can dynamically change styles and attributes of DOM elements using JavaScript.
+
+- `getAttribute` and `setAttribute` allow you to get and set attributes.
+- `innerText` sets or retrieves the text content of an element.
+- `innerHTML` sets or retrieves the HTML content of an element.
+
+```javascript
+const link = document.querySelector('a');
+const oldValue = link.getAttribute('href');
+link.setAttribute('href', 'https://newlink.com');
+link.innerText = 'Click me!';
+```
+
+### 3-60 Styling DOM Properties and Manipulating Classes
+
+You can change styles and manipulate classes to change the appearance of elements.
+
+```javascript
+const element = document.querySelector('.myElement');
+element.style.color = 'red';
+element.classList.add('newClass');
+element.classList.remove('oldClass');
+```
+
+### 3-61 NodeList, HTMLCollection, parentNode, childNodes, createElement
+
+- `NodeList` and `HTMLCollection` are array-like collections of nodes returned by various DOM methods.
+- `parentNode` allows you to access the parent of an element.
+- `childNodes` returns a collection of an element's child nodes.
+- `createElement` creates a new HTML element.
+
+### 3-62 Creating HTML Elements Using JavaScript and appendChild
+
+You can dynamically create and add elements to the DOM using `createElement` and `appendChild`.
+
+```javascript
+const newDiv = document.createElement('div');
+newDiv.innerText = 'This is a new div!';
+const container = document.querySelector('.container');
+container.appendChild(newDiv);
+```
